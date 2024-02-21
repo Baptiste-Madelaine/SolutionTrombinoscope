@@ -38,7 +38,7 @@
             </Grid>
             <Grid Grid.Row="0" Grid.Column="1" >
                 <Label Content="Membres" HorizontalAlignment="Left" Margin="47,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,0.269"/>
-                <ListView HorizontalAlignment="Left" Height="258" Margin="230,116,0,0" VerticalAlignment="Top" Width="140" IsEnabled="False">
+                <ListView Height="258" Margin="0,47,0,0" Width="140" IsEnabled="False">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
