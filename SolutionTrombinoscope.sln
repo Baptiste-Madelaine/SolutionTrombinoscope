@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTrombinoscope", "AppTrombinoscope\AppTrombinoscope.csproj", "{AA09D903-22A1-4450-815A-4867C584163D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DllbddPersonnels", "DllbddPersonnels\DllbddPersonnels.csproj", "{31ADD4FD-B405-4285-B891-F654D0402631}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA09D903-22A1-4450-815A-4867C584163D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA09D903-22A1-4450-815A-4867C584163D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA09D903-22A1-4450-815A-4867C584163D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA09D903-22A1-4450-815A-4867C584163D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31ADD4FD-B405-4285-B891-F654D0402631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31ADD4FD-B405-4285-B891-F654D0402631}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31ADD4FD-B405-4285-B891-F654D0402631}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31ADD4FD-B405-4285-B891-F654D0402631}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25542E99-AA38-4DC6-9FFC-7F1BF6B3D63E}
+	EndGlobalSection
+EndGlobal
