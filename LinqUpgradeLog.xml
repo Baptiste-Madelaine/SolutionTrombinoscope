@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='_LinqUpgradeReport_Files/LinqUpgradeReport.xslt'?>
+<LinqUpgradeLog>
+<Properties>
+<Property Name="Solution" Value="C:\Users\Aquiry\Source\Repos\Baptiste-Madelaine\SolutionTrombinoscope\SolutionTrombinoscope.sln"></Property>
+<Property Name="Solution File" Value="C:\Users\Aquiry\Source\Repos\Baptiste-Madelaine\SolutionTrombinoscope"></Property>
+<Property Name="Date" Value="21/02/2024 20:34:21"></Property>
+</Properties>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.config" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="App.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="MainWindow.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Properties" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Resources.resx" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Resources.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Settings.settings" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Settings.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Window1.xaml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="AppTrombinoscope" Source="Window1.xaml.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="ModelBDD.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="Properties" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="AssemblyInfo.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContext1.lqml" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContext1.Designer.cs" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContext1.Diagram1.view" Description="No need to convert"></Event>
+<Event ErrorLevel="3" Project="DllbddPersonnels" Source="DataContext1.edps" Description="No need to convert"></Event>
+
+</LinqUpgradeLog>

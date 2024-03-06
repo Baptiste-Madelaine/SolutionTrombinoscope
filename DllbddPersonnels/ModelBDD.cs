@@ -23,5 +23,21 @@ namespace DllbddPersonnels
             }
             catch { throw; }
         }
+        public List<Fonction> GetAllFonctions()
+        {
+            try
+            {
+                return bdd.Fonctions.ToList();
+            }
+            catch { throw; }
+        }
+        public List<Service> GetAllServices()
+        {
+            try
+            {
+                return bdd.Services.ToList();
+            }
+            catch { throw; }
+        }
     }
 }

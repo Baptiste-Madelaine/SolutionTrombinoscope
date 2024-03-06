@@ -14,7 +14,7 @@
             <MenuItem Header="Gestion Services" IsEnabled="False"/>
             <MenuItem Header="Gestion : fonctions" IsEnabled="False"/>
             <MenuItem Header="Gestion Personnels" IsEnabled="False"/>
-            <MenuItem Header="Gestionnaire "/>
+            <MenuItem Header="Gestionnaire " Click="MenuItem_Click"/>
             <MenuItem Header="Paramètres BDD" Click="MenuItem_ParamBDD"/>
 
         </Menu>
@@ -28,24 +28,32 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Row="0" Grid.Column="0" >
                 <Label Content="Services" HorizontalAlignment="Left" Margin="47,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,0.269"/>
-                <ListView Height="258" Margin="0,47,0,0" Width="140" IsEnabled="False">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </Grid>
-            <Grid Grid.Row="0" Grid.Column="1" >
-                <Label Content="Membres" HorizontalAlignment="Left" Margin="47,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,0.269"/>
-                <ListView Height="258" Margin="0,47,0,0" Width="140" IsEnabled="False">
+                <ListView Height="258" Margin="0,47,0,0" Width="140" x:Name="listServices">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
                                 <TextBlock>
-                            <Run Text="{Binding Id}" FontWeight="Bold"/>
-                            <Run Text=" - " FontWeight="Bold"/>
-                            <Run Text="{Binding Intitule}" FontWeight="Bold"/>
+                                    <Run Text="{Binding Id}" FontWeight="Bold"/>
+                                    <Run Text=" - " FontWeight="Bold"/>
+                                    <Run Text="{Binding Intitule}" FontWeight="Bold"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" >
+                <Label Content="Membres" HorizontalAlignment="Left" Margin="47,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,0.269"/>
+                <ListView Height="258" Margin="0,47,0,0" Width="140" x:Name="listMembers" SelectionChanged="listMember_SelectionChanged">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock>
+                                    <Run Text="{Binding Id}" FontWeight="Bold"/>
+                                    <Run Text=" - " FontWeight="Bold"/>
+                                    <Run Text="{Binding Nom}" FontWeight="Bold"/>
+                                    <Run Text=" " FontWeight="Bold"/>
+                                    <Run Text="{Binding Prenom}" FontWeight="Bold"/>
                                 </TextBlock>
                             </StackPanel>
                         </DataTemplate>
@@ -54,12 +62,18 @@
             </Grid>
             <Grid Grid.Row="0" Grid.Column="2" >
                 <Label Content="Fonctions" HorizontalAlignment="Left" Margin="47,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.526,0.269"/>
-                <ListView Height="258" Margin="0,47,0,0" Width="140" IsEnabled="False">
-                    <ListView.View>
-                        <GridView>
-                            <GridViewColumn/>
-                        </GridView>
-                    </ListView.View>
+                <ListView Height="258" Margin="0,47,0,0" Width="140" x:Name="listFonctions">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock>
+                                    <Run Text="{Binding Id}" FontWeight="Bold"/>
+                                    <Run Text=" - " FontWeight="Bold"/>
+                                    <Run Text="{Binding Intitule}" FontWeight="Bold"/>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
             </Grid>
 
@@ -81,11 +95,11 @@
                 <Label Content="Fonction :" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="79" Grid.Row="2" Grid.Column="0" />
                 <Label Content="Service :" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="79" Grid.Row="3" Grid.Column="0" />
                 <Label Content="Prénom :" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="56" Grid.Row="4" Grid.Column="0" />
-                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="0" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" x:Name="nameUser"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="1" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="2" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="3" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="4" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" x:Name="firstNameUser"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="0" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="148" IsEnabled="False" x:Name="textBoxLastName"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="148" IsEnabled="False" x:Name="textBoxPhone" Margin="0,72,0,0" Grid.RowSpan="2"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="1" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="148" IsEnabled="False" x:Name="textBoxFonction" Margin="0,72,0,0" Grid.RowSpan="2"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="2" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="148" IsEnabled="False" x:Name="textBoxService" Margin="0,72,0,0" Grid.RowSpan="2"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Grid.Row="3" Grid.Column="1"  TextWrapping="Wrap" VerticalAlignment="Top" Width="148" IsEnabled="False" x:Name="textBoxFirstName" Margin="0,72,0,0" Grid.RowSpan="2"/>
 
             </Grid>
 

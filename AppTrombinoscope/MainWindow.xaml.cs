@@ -23,62 +23,61 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        private string _ip;
-        public String ip
-        {
-            get { return _ip; }
-            set
-            {
-                if (value != _ip)
-                {
-                    _ip = value;
-                    OnPropertyChanged("Name2");
-                }
-            }
-        }
+        public String ip { set; get; }
+
         public String port { set; get; }
         public String user { set; get; }
         public String pass { set; get; }
 
         private ModelBDD bdd;
+
+        
         public MainWindow()
         {
             InitializeComponent();
+        
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        
-
-        
-
         private void MenuItem_Connexion(object sender, RoutedEventArgs e)
         {
             bdd = new ModelBDD(user, pass, ip, port);
             try
             {
-                List<Personnel> list = bdd.GetAllPersonnel();
-                nameUser.Text = list[0].Nom;
-                firstNameUser.Text = list[0].Prenom;
+                listMembers.ItemsSource = bdd.GetAllPersonnel();
+                listFonctions.ItemsSource = bdd.GetAllFonctions();
+                listServices.ItemsSource = bdd.GetAllServices();
             }
             catch {
-                Window1 test = new Window1(this);
-                test.Show();
+
+            }
+        }
+        private void MenuItem_ParamBDD(object sender, RoutedEventArgs e)
+        {
+            Window1.Instance.Show();
+            Window1.Instance.main = this;
+        }
+        private void listMember_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(listMembers.SelectedItems != null)
+            {
+                Personnel person = (Personnel)listMembers.SelectedItem;
+                textBoxFirstName.Text = person.Prenom;
+                textBoxFonction.Text = person.Fonction.Intitule;
+                textBoxLastName.Text = person.Nom;
+                textBoxPhone.Text = person.Telephone;
+                textBoxService.Text = person.Service.Intitule;
             }
         }
 
-        private void MenuItem_ParamBDD(object sender, RoutedEventArgs e)
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Window1 test = new Window1(this);
-            test.Show();
-        }
-
-        private void nameUser_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
+            Connection_Gestionnaire instance = Connection_Gestionnaire.GetInstance();
+            instance.SetBdd(bdd);
+            instance.Visibility = Visibility.Visible;
         }
     }
 }

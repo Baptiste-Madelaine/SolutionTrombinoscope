@@ -19,13 +19,37 @@ namespace AppTrombinoscope
     /// </summary>
     public partial class Window1 : Window
     {
-        private MainWindow main;
+        private static Window1 instance;
+        public static Window1 Instance
+        {
+            get
+            {
+                if(instance == null || instance.IsVisible == false)
+                {
+                    instance = new Window1();
+                }
+                return instance;
+            }
+        }
+        private MainWindow _main;
+        public MainWindow main {
+            set
+            {
+                _main = value;
+                ipLab.Text = _main.ip;
+                userLab.Text = _main.user;
+                if(_main.port != null)
+                {
+                    portLab.Text = _main.port;
+                }
+            }
+            get { return _main; }
+             
+        }
         
-        public Window1(MainWindow main)
+        public Window1()
         {
             InitializeComponent();
-            this.main = main;
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
