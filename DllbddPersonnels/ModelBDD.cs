@@ -39,5 +39,16 @@ namespace DllbddPersonnels
             }
             catch { throw; }
         }
+        public void NewPersonnel(String Nom, String Prenom, String Tele, int Service, int Fonction)
+        {
+            Personnel p = new Personnel();
+            p.IdFonction = Fonction;
+            p.IdService = Service;
+            p.Nom = Nom;
+            p.Prenom = Prenom;
+            p.Telephone = Tele;
+            bdd.Personnels.InsertOnSubmit(p);
+            bdd.SubmitChanges();
+        }
     }
 }

@@ -36,11 +36,11 @@ namespace AppTrombinoscope
             set
             {
                 _main = value;
-                ipLab.Text = _main.ip;
-                userLab.Text = _main.user;
+                //ipLab.Text = _main.ip;
+                //userLab.Text = _main.user;
                 if(_main.port != null)
                 {
-                    portLab.Text = _main.port;
+                    //portLab.Text = _main.port;
                 }
             }
             get { return _main; }

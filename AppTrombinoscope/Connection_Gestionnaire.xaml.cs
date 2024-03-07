@@ -24,8 +24,19 @@ namespace AppTrombinoscope
         {
             InitializeComponent();
         }
-        private static Connection_Gestionnaire _instance;
+        public static Connection_Gestionnaire _instance;
         private ModelBDD _bdd;
+
+        private MainWindow _main;
+        public MainWindow main
+        {
+            set
+            {
+                _main = value;
+            }
+            get { return _main; }
+
+        }
         public static Connection_Gestionnaire GetInstance()
         {
             if( _instance == null)
@@ -38,6 +49,31 @@ namespace AppTrombinoscope
         {
             this._bdd = bdd;
         }
-        
+
+        private void Connexion(object sender, RoutedEventArgs e)
+        {
+            _main.user = User.Text;
+            _main.pass = Password.Text;
+            
+            try
+            {
+                _main.MenuItem_Connexion(sender, e);
+                _main.lPersonnel.IsEnabled = true;
+                _main.GestionFonctions.IsEnabled = true;
+                _main.GestionPersonnels.IsEnabled = true;
+                _main.GestionServices.IsEnabled = true;
+                this.Visibility = Visibility.Hidden;
+            }
+            catch 
+            {
+                /* TODO Things to do while not goot credentials */
+            }
+            
+        }
+
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            this.Visibility = Visibility.Hidden;
+        }
     }
 }

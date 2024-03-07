@@ -9,13 +9,13 @@
         ResizeMode="NoResize"
         >
     <Grid Background="#FF76B6AA">
-        <Label Content="Adresse IP BDD :" HorizontalAlignment="Left" Margin="152,82,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse IP BDD :" HorizontalAlignment="Left" Margin="152,82,0,0" VerticalAlignment="Top" />
         <Label Content="Mot de passe :" HorizontalAlignment="Left" Margin="152,282,0,0" VerticalAlignment="Top"/>
         <Label Content="Utilisateur :" HorizontalAlignment="Left" Margin="152,206,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.36,5.455"/>
         <Label Content="Port d'écoute BDD :" HorizontalAlignment="Left" Margin="152,141,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="423,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="ipLab"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="423,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="ipLab" Text="localhost"/>
 
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="423,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="userLab"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="423,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="userLab" Text="UtilisateurBDD" />
         <TextBox HorizontalAlignment="Left" Height="23" Margin="423,141,0,0" TextWrapping="Wrap" Text="3306" VerticalAlignment="Top" Width="120" x:Name="portLab"/>
         <Button Content="Enregistrer" HorizontalAlignment="Left" Margin="175,344,0,0" VerticalAlignment="Top" Width="206" Height="35" Click="Button_Click"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="438,344,0,0" VerticalAlignment="Top" Width="105" Height="35" Click="Button_Click_1"/>

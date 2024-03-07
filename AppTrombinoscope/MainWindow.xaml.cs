@@ -42,7 +42,7 @@ namespace AppTrombinoscope
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private void MenuItem_Connexion(object sender, RoutedEventArgs e)
+        public void MenuItem_Connexion(object sender, RoutedEventArgs e)
         {
             bdd = new ModelBDD(user, pass, ip, port);
             try
@@ -76,8 +76,22 @@ namespace AppTrombinoscope
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             Connection_Gestionnaire instance = Connection_Gestionnaire.GetInstance();
+            instance.main = this;
             instance.SetBdd(bdd);
-            instance.Visibility = Visibility.Visible;
+            instance.Show();
+        }
+
+        private void GestionPersonnels_Click(object sender, RoutedEventArgs e)
+        {
+            GestionPersonnelsView instance = GestionPersonnelsView.instance;
+            instance.bdd = bdd;
+            instance.setup();
+            instance.Show();
+        }
+
+        private void GestionFonctions_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

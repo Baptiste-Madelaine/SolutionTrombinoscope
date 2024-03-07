@@ -35,6 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Devart.Data.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.SqlServer.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -58,10 +60,17 @@
     <Compile Include="Connection_Gestionnaire.xaml.cs">
       <DependentUpon>Connection_Gestionnaire.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GestionPersonnelsView.xaml.cs">
+      <DependentUpon>GestionPersonnelsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="Connection_Gestionnaire.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionPersonnelsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

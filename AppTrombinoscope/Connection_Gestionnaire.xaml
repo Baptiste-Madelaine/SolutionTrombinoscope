@@ -8,11 +8,11 @@
         Title="Connection_Gestionnaire" Height="450" Width="800">
     <Grid Background="#FF85AC98">
         <Label HorizontalAlignment="Left" Margin="186,129,0,0" VerticalAlignment="Top" Height="24" Width="109" Content="Nom d'utilisateur :" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="388,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" TextChanged="TextBox_TextChanged" Height="29"/>
+        <TextBox HorizontalAlignment="Left" Margin="388,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="29" x:Name="User"/>
         <Label HorizontalAlignment="Left" Margin="186,193,0,0" VerticalAlignment="Top" Height="24" Width="109" Content="Mot de passe :" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Margin="388,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" TextChanged="TextBox_TextChanged" Height="29"/>
-        <Button Content="Connexion" HorizontalAlignment="Left" Margin="186,293,0,0" VerticalAlignment="Top" Height="32" Width="150"/>
-        <Button Content="Annuler" HorizontalAlignment="Left" Margin="421,293,0,0" VerticalAlignment="Top" Height="32" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Margin="388,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="183" Height="29" x:Name="Password"/>
+        <Button Content="Connexion" HorizontalAlignment="Left" Margin="186,293,0,0" VerticalAlignment="Top" Height="32" Width="150" Click="Connexion"/>
+        <Button Content="Annuler" HorizontalAlignment="Left" Margin="421,293,0,0" VerticalAlignment="Top" Height="32" Width="150" Click="Cancel"/>
 
     </Grid>
 </Window>
