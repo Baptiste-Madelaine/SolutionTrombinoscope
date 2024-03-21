@@ -93,5 +93,20 @@ namespace AppTrombinoscope
         {
 
         }
+        private void lPersonnel_Click(object sender, RoutedEventArgs e)
+        {
+            ListePersonnelsView instance = ListePersonnelsView.instance;
+            instance.bdd = bdd;
+            instance.setup();
+            instance.Show();
+        }
+
+        private void GestionServices_Click(object sender, RoutedEventArgs e)
+        {
+            GestionServicessView instance = GestionServicessView.instance;
+            instance.bdd = bdd;
+            instance.setup();
+            instance.Show();
+        }
     }
 }

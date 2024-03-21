@@ -63,6 +63,12 @@
     <Compile Include="GestionPersonnelsView.xaml.cs">
       <DependentUpon>GestionPersonnelsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GestionServicessView.xaml.cs">
+      <DependentUpon>GestionServicessView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListePersonnelsView.xaml.cs">
+      <DependentUpon>ListePersonnelsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -73,6 +79,14 @@
     <Page Include="GestionPersonnelsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GestionServicessView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListePersonnelsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

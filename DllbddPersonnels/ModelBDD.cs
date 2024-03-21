@@ -15,6 +15,15 @@ namespace DllbddPersonnels
         {
             bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIP + ";Port=" + port + ";Database=bddpersonnels;Persist Security Info=True");
         }
+        public List<Personnel> GetPersonnelByName(String LastName)
+        {
+            try
+            {
+                return bdd.Personnels.Where(Personnel => Personnel.Nom.Contains(LastName)).ToList();
+
+            }
+            catch { throw; }
+        }
         public List<Personnel> GetAllPersonnel()
         {
             try
@@ -48,6 +57,17 @@ namespace DllbddPersonnels
             p.Prenom = Prenom;
             p.Telephone = Tele;
             bdd.Personnels.InsertOnSubmit(p);
+            bdd.SubmitChanges();
+        }
+        public void DeleteService(Service s)
+        {
+            bdd.Services.DeleteOnSubmit(s);
+            bdd.SubmitChanges();
+        }
+        public void UpdateService(Service s)
+        {
+            Service b = bdd.Services.Single(c => c.Id == s.Id);
+            b.Intitule = s.Intitule;
             bdd.SubmitChanges();
         }
     }
