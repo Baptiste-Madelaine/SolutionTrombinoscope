@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppTrombinoscope", "AppTrombinoscope\AppTrombinoscope.csproj", "{AA09D903-22A1-4450-815A-4867C584163D}"
 EndProject
@@ -18,9 +18,7 @@ Global
 		{AA09D903-22A1-4450-815A-4867C584163D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA09D903-22A1-4450-815A-4867C584163D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31ADD4FD-B405-4285-B891-F654D0402631}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31ADD4FD-B405-4285-B891-F654D0402631}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31ADD4FD-B405-4285-B891-F654D0402631}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31ADD4FD-B405-4285-B891-F654D0402631}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

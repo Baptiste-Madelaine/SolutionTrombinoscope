@@ -14,6 +14,16 @@ namespace DllbddPersonnels
         public ModelBDD(String user, String mdp, String serveurIP, String port)
         {
             bdd = new BddpersonnelDataContext("User Id=" + user + ";Password=" + mdp + ";Host=" + serveurIP + ";Port=" + port + ";Database=bddpersonnels;Persist Security Info=True");
+            
+        }
+        public List<Personnel> GetPersonnelByName(String LastName)
+        {
+            try
+            {
+                return bdd.Personnels.Where(Personnel => Personnel.Nom.Contains(LastName)).ToList();
+                
+            }
+            catch { throw; }
         }
         public List<Personnel> GetAllPersonnel()
         {

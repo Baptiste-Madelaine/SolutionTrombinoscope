@@ -21,7 +21,7 @@ namespace AppTrombinoscope
     /// <summary>
     /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
         public String ip { set; get; }
 
@@ -31,17 +31,9 @@ namespace AppTrombinoscope
 
         private ModelBDD bdd;
 
-        
-        public MainWindow()
-        {
-            InitializeComponent();
-        
-        }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        /// <summary>Constructeur </summary>
+        public MainWindow() => InitializeComponent();
+
         public void MenuItem_Connexion(object sender, RoutedEventArgs e)
         {
             bdd = new ModelBDD(user, pass, ip, port);
@@ -92,6 +84,14 @@ namespace AppTrombinoscope
         private void GestionFonctions_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void lPersonnel_Click(object sender, RoutedEventArgs e)
+        {
+            ListePersonnelsView instance = ListePersonnelsView.instance;
+            instance.bdd = bdd;
+            instance.setup();
+            instance.Show();
         }
     }
 }

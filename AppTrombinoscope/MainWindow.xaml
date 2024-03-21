@@ -10,7 +10,7 @@
 
         <Menu Height="33" Width="792" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Stretch">
             <MenuItem Header="Connexion BDD" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" RenderTransformOrigin="0.537,0.796" Click="MenuItem_Connexion"/>
-            <MenuItem Header="Liste Du Personnel" IsEnabled="False"  x:Name="lPersonnel"/>
+            <MenuItem Header="Liste Du Personnel" IsEnabled="False"  x:Name="lPersonnel" Click="lPersonnel_Click"/>
             <MenuItem Header="Gestion Services" IsEnabled="False"    x:Name="GestionServices"/>
             <MenuItem Header="Gestion : fonctions" IsEnabled="False" x:Name="GestionFonctions" Click="GestionFonctions_Click"/>
             <MenuItem Header="Gestion Personnels" IsEnabled="False"  x:Name="GestionPersonnels" Click="GestionPersonnels_Click"/>

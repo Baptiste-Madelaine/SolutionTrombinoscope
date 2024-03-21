@@ -31,13 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data, Version=5.0.2938.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.MySql, Version=9.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
-    <Reference Include="Devart.Data.MySql.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data, Version=6.0.10.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.Linq, Version=5.1.10.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql, Version=9.3.10.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
+    <Reference Include="Devart.Data.MySql.Linq, Version=5.1.10.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,25 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BddPersonnelsDataContext.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
-    </Compile>
-    <Compile Include="ModelBDD.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BddPersonnelsDataContext.Diagram1.view">
-      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataContextbddpersonnels.Diagram1.view">
+      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
     </None>
-    <None Include="BddPersonnelsDataContext.edps">
-      <DependentUpon>BddPersonnelsDataContext.lqml</DependentUpon>
+    <None Include="DataContextbddpersonnels.edps">
+      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
     </None>
-    <None Include="BddPersonnelsDataContext.lqml">
+    <None Include="DataContextbddpersonnels.lqml">
       <Generator>DevartLinqToSqlGenerator</Generator>
-      <LastGenOutput>BddPersonnelsDataContext.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataContextbddpersonnels1.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContextbddpersonnels1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContextbddpersonnels.lqml</DependentUpon>
+    </Compile>
+    <Compile Include="ModelBDD.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
